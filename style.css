@@ -80,6 +80,7 @@ body.dark-mode #generate-btn, body.dark-mode button[type="submit"] {
     justify-content: center;
     flex-wrap: wrap;
     margin-top: 20px;
+    perspective: 500px; /* For 3D effect if needed */
 }
 
 .number {
@@ -93,9 +94,26 @@ body.dark-mode #generate-btn, body.dark-mode button[type="submit"] {
     font-size: 1.5em;
     font-weight: bold;
     color: #fff;
+    opacity: 0; /* Initially hidden for animation */
 }
 
 /* Form Styles */
+#contact-section {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #ccc;
+}
+
+body.dark-mode #contact-section {
+    border-top-color: #555;
+}
+
+#contact-section h2 {
+    text-align: center;
+    font-size: 1.8em;
+    margin-bottom: 30px;
+}
+
 form {
     display: flex;
     flex-direction: column;
@@ -135,4 +153,34 @@ body.dark-mode textarea {
 textarea {
     resize: vertical;
     min-height: 100px;
+}
+
+/* Animation Keyframes */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+/* Animation Classes */
+.fade-in {
+    animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+.fade-out {
+    animation: fadeOut 0.5s ease-in-out forwards;
 }
