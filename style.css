@@ -4,11 +4,15 @@
     --container-bg-light: #fff;
     --button-bg-light: #007bff;
     --button-text-light: #fff;
+    --input-bg-light: #fff;
+    --input-border-light: #ccc;
     --background-color-dark: #333;
     --text-color-dark: #f0f0f0;
     --container-bg-dark: #444;
     --button-bg-dark: #0056b3;
     --button-text-dark: #fff;
+    --input-bg-dark: #555;
+    --input-border-dark: #666;
 }
 
 body {
@@ -50,7 +54,7 @@ header {
     margin-bottom: 20px;
 }
 
-#generate-btn {
+#generate-btn, button[type="submit"] {
     display: block;
     width: 100%;
     padding: 15px;
@@ -61,12 +65,12 @@ header {
     transition: background-color 0.3s;
 }
 
-body.light-mode #generate-btn {
+body.light-mode #generate-btn, body.light-mode button[type="submit"] {
     background-color: var(--button-bg-light);
     color: var(--button-text-light);
 }
 
-body.dark-mode #generate-btn {
+body.dark-mode #generate-btn, body.dark-mode button[type="submit"] {
     background-color: var(--button-bg-dark);
     color: var(--button-text-dark);
 }
@@ -89,4 +93,46 @@ body.dark-mode #generate-btn {
     font-size: 1.5em;
     font-weight: bold;
     color: #fff;
+}
+
+/* Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input,
+textarea {
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    font-size: 1em;
+    width: 100%;
+    box-sizing: border-box; /* To include padding and border in the element's total width and height */
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+body.light-mode input,
+body.light-mode textarea {
+    background-color: var(--input-bg-light);
+    border: 1px solid var(--input-border-light);
+    color: var(--text-color-light);
+}
+
+body.dark-mode input,
+body.dark-mode textarea {
+    background-color: var(--input-bg-dark);
+    border: 1px solid var(--input-border-dark);
+    color: var(--text-color-dark);
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
 }

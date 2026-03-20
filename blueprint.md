@@ -1,4 +1,3 @@
-
 # Lotto Number Generator
 
 ## Overview
@@ -10,6 +9,7 @@ This application generates a set of 6 unique random numbers for a lottery, typic
 *   **UI Components:**
     *   A prominent button to trigger the number generation.
     *   A display area to show the generated numbers.
+    *   A partnership inquiry form using Formspree.
 *   **Styling:**
     *   Modern and clean design.
     *   Visually appealing layout with balanced spacing.
@@ -18,6 +18,5 @@ This application generates a set of 6 unique random numbers for a lottery, typic
 
 ## Current Plan
 
-1.  **Modify `index.html`** to create the basic structure of the application, including a title, a button, and a container for the numbers.
-2.  **Modify `style.css`** to add modern styling, making the application visually appealing and responsive.
-3.  **Modify `main.js`** to implement the logic for generating unique random lottery numbers and displaying them on the page.
+1.  **Modify `index.html`** to add a partnership inquiry form. The form will use Formspree to handle submissions.
+2.  **Modify `style.css`** to style the new inquiry form.
